@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 12:39:13 by etlim             #+#    #+#             */
-/*   Updated: 2023/08/07 13:03:40 by etlim            ###   ########.fr       */
+/*   Updated: 2023/08/09 17:32:11 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 # define PUSH_SWAP_H
 
 # include <unistd.h>
+# include <stdlib.h>
+# include "libft.h"
 
 #endif

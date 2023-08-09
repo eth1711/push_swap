@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 13:20:37 by ethanlim          #+#    #+#             */
-/*   Updated: 2023/08/07 16:19:59 by etlim            ###   ########.fr       */
+/*   Updated: 2023/08/09 17:34:35 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <stdlib.h>
+# include <string.h>
+# include <stdbool.h>
+# include <fcntl.h>
 # include <stdio.h>
 
 //libft
@@ -44,16 +47,12 @@ void	ft_printnum_unsigned(unsigned long long int num, char *hex, int *count);
 char	*get_next_line(int fd);
 char	*ft_strjoin(char *s1, char *s2);
 
-
-
-
-
-
 typedef struct s_list
 {
-	void	*content;
+	int				content;
+	int				index;
 	struct s_list	*next;
 	struct s_list	*prev;
-}		t_list;
+}					t_list;
 
 #endif
