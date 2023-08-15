@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ethanlim <ethanlim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:36:15 by etlim             #+#    #+#             */
-/*   Updated: 2023/07/24 13:22:16 by ethanlim         ###   ########.fr       */
+/*   Updated: 2023/08/15 11:02:37 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(char *str)
 {
-	int	i;
-	int	res;
-	int	sign;
+	int			i;
+	long int	res;
+	long int	sign;
 
 	i = 0;
 	res = 0;

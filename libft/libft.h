@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 13:20:37 by ethanlim          #+#    #+#             */
-/*   Updated: 2023/08/09 17:34:35 by etlim            ###   ########.fr       */
+/*   Updated: 2023/08/15 12:29:48 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,14 @@
 # include <fcntl.h>
 # include <stdio.h>
 
+typedef struct s_list
+{
+	int				content;
+	int				index;
+	struct s_list	*next;
+	struct s_list	*prev;
+}					t_list;
+
 //libft
 int		ft_atoi(char *str);
 int		ft_lstsize(t_list *lst);
@@ -33,7 +41,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 t_list	*ft_lstlast(t_list *lst);
-t_list	*ft_lstnew(void *content);
+t_list	*ft_lstnew(int num);
 
 //ft_printf
 int		ft_strlen(char *s);
@@ -46,13 +54,5 @@ void	ft_printnum_unsigned(unsigned long long int num, char *hex, int *count);
 //get_next_line
 char	*get_next_line(int fd);
 char	*ft_strjoin(char *s1, char *s2);
-
-typedef struct s_list
-{
-	int				content;
-	int				index;
-	struct s_list	*next;
-	struct s_list	*prev;
-}					t_list;
 
 #endif
