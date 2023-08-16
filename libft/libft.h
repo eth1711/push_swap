@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ethanlim <ethanlim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 13:20:37 by ethanlim          #+#    #+#             */
-/*   Updated: 2023/08/15 12:29:48 by etlim            ###   ########.fr       */
+/*   Updated: 2023/08/15 22:44:39 by ethanlim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 
 typedef struct s_list
 {
-	int				content;
+	int				num;
 	int				index;
 	struct s_list	*next;
 	struct s_list	*prev;

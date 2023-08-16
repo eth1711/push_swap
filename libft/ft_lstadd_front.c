@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ethanlim <ethanlim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 13:44:54 by etlim             #+#    #+#             */
-/*   Updated: 2023/08/07 16:12:22 by etlim            ###   ########.fr       */
+/*   Updated: 2023/08/16 00:22:02 by ethanlim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,18 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	t_list *temp;
+	
 	if (!lst || !new)
 		return ;
-	if (lst && new)
+	new->prev = NULL:
+	if (!lst || !*lst)
 	{
-		new->next = *lst;
 		*lst = new;
+		return ;	
 	}
+	new->next = *lst;
+	temp = *lst;
+	temp->prev =  new;
+	*lst = new;
 }
