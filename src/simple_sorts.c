@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 13:21:18 by etlim             #+#    #+#             */
-/*   Updated: 2023/08/16 18:43:07 by etlim            ###   ########.fr       */
+/*   Updated: 2023/08/16 19:23:29 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	sort_three(t_list **lst)
 {
 	t_list	*stack;
 
+	if (is_sorted(*lst))
+		return ;
 	stack = (*lst)->next;
 	if (stack->prev->index > stack->index)
 	{

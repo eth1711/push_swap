@@ -6,13 +6,13 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:36:15 by etlim             #+#    #+#             */
-/*   Updated: 2023/08/15 11:02:37 by etlim            ###   ########.fr       */
+/*   Updated: 2023/08/16 19:34:38 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+long	ft_atoi(char *str)
 {
 	int			i;
 	long int	res;
