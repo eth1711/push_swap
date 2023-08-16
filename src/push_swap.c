@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 12:39:02 by etlim             #+#    #+#             */
-/*   Updated: 2023/08/16 19:22:32 by etlim            ###   ########.fr       */
+/*   Updated: 2023/08/16 19:43:20 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(int c, char **str)
 	int		i;
 
 	if (c < 3 || !check_parse(str))
-		return (-1);
+		return (ft_putendl_fd("Error", 2), -1);
 	i = 0;
 	a = NULL;
 	b = NULL;
