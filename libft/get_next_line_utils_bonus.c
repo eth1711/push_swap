@@ -6,13 +6,13 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 14:37:32 by etlim             #+#    #+#             */
-/*   Updated: 2023/08/07 16:19:04 by etlim            ###   ########.fr       */
+/*   Updated: 2023/08/16 18:03:22 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_strlen(char *s)
+static size_t	gnl_ft_strlen(char *s)
 {
 	int	i;
 
@@ -34,7 +34,7 @@ char	*ft_strjoin(char *s1, char *s2)
 
 	a = 0;
 	b = -1;
-	newstr = (char *)malloc((ft_strlen(s1) + ft_strlen(s2)) + 1
+	newstr = (char *)malloc((gnl_ft_strlen(s1) + gnl_ft_strlen(s2)) + 1
 			* sizeof(char));
 	if (!newstr)
 		return (NULL);

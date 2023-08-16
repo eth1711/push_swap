@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 17:26:49 by ethanlim          #+#    #+#             */
-/*   Updated: 2023/08/16 13:44:24 by etlim            ###   ########.fr       */
+/*   Updated: 2023/08/16 17:46:19 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	get_value(t_list *stack)
 	return (num);
 }
 
-int	index_values(t_list *str, int val)
+void	index_values(t_list *str, int val)
 {
 	int		min;
 	int		index;

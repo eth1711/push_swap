@@ -1,25 +1,37 @@
 NAME 		= push_swap
-OBJS		= $(addprefix $(OBJS_DIR), $(SRCS:.c=.o))
-OBJS_DIR	= objs/
-SRCS		= $(wildcard *.c)
-INCS		=
+SRCS		= index.c moves.c parse.c push_swap.c radix_sort.c simple_sorts.c sort_utils.c 
+# SRCS_B		= 
+BONUS		= checker
+DIR			= src/
+SRCS_PREF	= $(addprefix $(DIR), $(SRCS))
+# SRCS_B_PREF	= $(addprefix $(DIR), $(SRCS_B))
+OBJS		= $(SRCS_PREF:.c=.o)
+# OBJS_B		= $(SRCS_B_PREF:.c=.o)
+INCS		= -Iincludes #-Ilibft -L./libft
 CC			= gcc
 CFLAGS		= -Wall -Werror -Wextra
 RM			= rm -rf
 
-$(NAME) : $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+%.o: %.c
+	$(CC) $(CFLAGS) -Iincludes -Ilibft -c $< -o $@
 
-$(OBJS_DIR)%.o: %.c 
-	mkdir -p $(OBJS_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+$(NAME) : $(OBJS)
+	make -C libft
+	$(CC) $(CFLAGS) $(INCS) -o $@ $(OBJS) libft/libft.a
+
+$(BONUS) : $(OBJS_B)
+	$(CC) $(CFLAGS) $(INCS) -o $@ $(OBJS_B)
 
 all : $(NAME)
 
+bonus : $(BONUS)
+
 clean :
-	$(RM) $(OBJS_DIR)
+	@make clean -C ./libft
+	@rm -rf src/*.o
 
 fclean : clean
-	$(RM) $(NAME)
+	@make fclean -C ./libft
+	@rm -rf $(NAME)
 
 re : fclean all

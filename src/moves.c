@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 12:35:05 by etlim             #+#    #+#             */
-/*   Updated: 2023/08/16 13:17:39 by etlim            ###   ########.fr       */
+/*   Updated: 2023/08/16 17:35:35 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	push(t_list **src_stack, t_list **dst_stack, char c)
 	ft_printf("p%c\n", c);
 }
 
-void	dual(t_list **a, t_list **b, (*f)(t_list **, char), char c)
+void	dual(t_list **a, t_list **b, void (*f)(t_list **, char), char c)
 {
 	if (c == 's')
 	{

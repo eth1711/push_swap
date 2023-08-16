@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 14:37:30 by etlim             #+#    #+#             */
-/*   Updated: 2023/03/07 10:58:52 by etlim            ###   ########.fr       */
+/*   Created: 2022/10/12 09:13:39 by etlim             #+#    #+#             */
+/*   Updated: 2022/10/28 23:56:24 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_BONUS_H
-# define GET_NEXT_LINE_BONUS_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
+void	ft_putendl_fd(char *s, int fd)
+{
+	int	i;
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
-# endif
+	i = 0;
+	if (!s)
+		return ;
+	while (s[i] != '\0')
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
+	write(fd, "\n", 1);
+}
+/*  ft_putstr_fd(, );
+    ft_putchar_fd('\n', fd); */
 
-char			*get_next_line(int fd);
-char			*ft_strjoin(char *s1, char *s2);
-
-#endif
+/* int main(void)
+{
+    ft_putendl_fd("hello", 1);
+} */
