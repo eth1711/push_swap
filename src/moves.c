@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 12:35:05 by etlim             #+#    #+#             */
-/*   Updated: 2023/08/16 17:35:35 by etlim            ###   ########.fr       */
+/*   Updated: 2023/08/16 18:28:35 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	rev_rotate(t_list **stack, char c)
 	if (!stack || ft_lstsize(*stack) < 2)
 		return ;
 	temp = ft_lstlast(*stack);
-	temp->next->prev = NULL;
+	temp->prev->next = NULL;
 	ft_lstadd_front(stack, temp);
 	if (c == 'a' || c == 'b')
 		ft_printf("rr%c\n", c);

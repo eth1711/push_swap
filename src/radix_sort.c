@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 15:20:47 by etlim             #+#    #+#             */
-/*   Updated: 2023/08/16 17:39:26 by etlim            ###   ########.fr       */
+/*   Updated: 2023/08/16 18:40:56 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	radix_sort(t_list **stack_a, t_list **stack_b)
 				push(stack_a, stack_b, 'b');
 		}
 		while (*stack_b)
-			push(stack_a, stack_b, 'a');
+			push(stack_b, stack_a, 'a');
 		bits++;
 	}
 }

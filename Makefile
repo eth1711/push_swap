@@ -9,7 +9,7 @@ OBJS		= $(SRCS_PREF:.c=.o)
 # OBJS_B		= $(SRCS_B_PREF:.c=.o)
 INCS		= -Iincludes #-Ilibft -L./libft
 CC			= gcc
-CFLAGS		= -Wall -Werror -Wextra
+CFLAGS		= -Wall -Werror -Wextra -fsanitize=address -g3
 RM			= rm -rf
 
 %.o: %.c

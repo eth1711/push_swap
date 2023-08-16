@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 13:26:10 by etlim             #+#    #+#             */
-/*   Updated: 2023/08/16 17:51:47 by etlim            ###   ########.fr       */
+/*   Updated: 2023/08/16 18:24:15 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	is_sorted(t_list *stack)
 	stack = stack->next;
 	while (stack)
 	{
-		if (stack->next->num > stack->num)
+		if (stack->prev->num > stack->num)
 			return (0);
 		stack = stack->next;
 	}

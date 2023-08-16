@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 13:21:18 by etlim             #+#    #+#             */
-/*   Updated: 2023/08/16 17:51:27 by etlim            ###   ########.fr       */
+/*   Updated: 2023/08/16 18:43:07 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	sort_three(t_list **lst)
 	if (stack->prev->index > stack->index)
 	{
 		if ((stack->prev->index > stack->next->index)
-			&& (stack->next->index > stack->index))
+			&& (stack->index < stack->next->index))
 			rotate(lst, 'a');
 		else if (stack->next->index > stack->index)
 			swap(lst, 'a');
@@ -43,14 +43,14 @@ void	sort_four_five(t_list **stack_a, t_list **stack_b, int c)
 {
 	if (is_sorted(*stack_a))
 		return ;
-	if (c == 4)
+	if (c == 5)
 	{
 		push_to_top(stack_a, 1, ft_lstsize(*stack_a), 'a');
 		push(stack_a, stack_b, 'b');
 		sort_three(stack_a);
 		push(stack_b, stack_a, 'a');
 	}
-	if (c == 5)
+	if (c == 6)
 	{
 		push_to_top(stack_a, 1, ft_lstsize(*stack_a), 'a');
 		push(stack_a, stack_b, 'b');
