@@ -1,12 +1,12 @@
 NAME 		= push_swap
 SRCS		= index.c moves.c parse.c push_swap.c radix_sort.c simple_sorts.c sort_utils.c 
-SRCS_B		= index.c moves.c parse.c push_swap_bonus.c sort_utils.c 
+# SRCS_B		= 
 BONUS		= checker
 DIR			= src/
 SRCS_PREF	= $(addprefix $(DIR), $(SRCS))
-SRCS_B_PREF	= $(addprefix $(DIR), $(SRCS_B))
+# SRCS_B_PREF	= $(addprefix $(DIR), $(SRCS_B))
 OBJS		= $(SRCS_PREF:.c=.o)
-OBJS_B		= $(SRCS_B_PREF:.c=.o)
+# OBJS_B		= $(SRCS_B_PREF:.c=.o)
 INCS		= -Iincludes #-Ilibft -L./libft
 CC			= gcc
 CFLAGS		= -Wall -Werror -Wextra -fsanitize=address -g3
@@ -20,12 +20,9 @@ $(NAME) : $(OBJS)
 	$(CC) $(CFLAGS) $(INCS) -o $@ $(OBJS) libft/libft.a
 
 $(BONUS) : $(OBJS_B)
-	make -C libft
-	$(CC) $(CFLAGS) $(INCS) -o $@ $(OBJS_B) libft/libft.a
+	$(CC) $(CFLAGS) $(INCS) -o $@ $(OBJS_B)
 
-all : $(NAME) $(BONUS)
-
-man : $(NAME)
+all : $(NAME)
 
 bonus : $(BONUS)
 
@@ -35,6 +32,6 @@ clean :
 
 fclean : clean
 	@make fclean -C ./libft
-	@rm -rf $(NAME) $(BONUS)
+	@rm -rf $(NAME)
 
 re : fclean all

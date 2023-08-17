@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 13:20:37 by ethanlim          #+#    #+#             */
-/*   Updated: 2023/08/17 12:15:49 by etlim            ###   ########.fr       */
+/*   Updated: 2023/08/16 19:35:07 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,8 @@ typedef struct s_list
 }					t_list;
 
 //libft
-int		ft_lstsize(t_list *lst);
-int		ft_strcmp(char *s1, char *s2);
 long	ft_atoi(char *str);
+int		ft_lstsize(t_list *lst);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);

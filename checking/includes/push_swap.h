@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 12:39:13 by etlim             #+#    #+#             */
-/*   Updated: 2023/08/17 14:40:21 by etlim            ###   ########.fr       */
+/*   Updated: 2023/08/16 17:49:37 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,5 @@ void	sort_four_five(t_list **stack_a, t_list **stack_b, int c);
 int		is_sorted(t_list *stack);
 void	push_to_top(t_list **head, int num, int size, char c);
 void	print_stack(t_list *stack);
-
-void	do_instructions(t_list **stack_a, t_list **stack_b);
 
 #endif
